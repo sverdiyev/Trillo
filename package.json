@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass": "node-sass Natours_course/sass/style.scss Natours_course/css/style.css -w "
   },
   "keywords": [],
   "author": "",
