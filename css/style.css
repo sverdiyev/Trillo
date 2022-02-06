@@ -20,6 +20,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 69em) {
+    html {
+      font-size: 50%; } }
 
 *,
 *::after,
@@ -116,11 +119,28 @@ body {
 .side-nav {
   font-size: 1.4rem;
   list-style: none;
-  margin-top: 3.5rem; }
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (max-width: 55em) {
+    .side-nav {
+      flex-direction: row;
+      margin: 0; }
+      .side-nav__item {
+        margin: 0; } }
   .side-nav__item {
-    position: relative; }
+    position: relative;
+    display: flex;
+    white-space: pre; }
+    @media only screen and (max-width: 55em) {
+      .side-nav__item {
+        margin: 0;
+        flex: 1; } }
     .side-nav__item:not(:last-child) {
       margin-bottom: 0.5rem; }
+      @media only screen and (max-width: 55em) {
+        .side-nav__item:not(:last-child) {
+          margin: 0; } }
   .side-nav__item::before {
     content: '';
     position: absolute;
@@ -146,6 +166,9 @@ body {
     align-items: center;
     position: relative;
     z-index: 3; }
+    @media only screen and (max-width: 55em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        justify-content: center; } }
   .side-nav__icon {
     height: 1.75rem;
     width: 1.75rem;
@@ -157,6 +180,9 @@ body {
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem; }
+  @media only screen and (max-width: 55em) {
+    .legal {
+      display: none; } }
 
 .gallery {
   display: flex; }
@@ -173,7 +199,11 @@ body {
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 1.5rem 3rem; }
+    padding: 1.5rem 3rem;
+    white-space: pre; }
+    @media only screen and (max-width: 27em) {
+      .overview__heading {
+        font-size: 1.9rem; } }
   .overview__stars {
     display: flex;
     align-items: center;
@@ -198,11 +228,19 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center; }
+    @media only screen and (max-width: 27em) {
+      .overview__rating {
+        margin: 0;
+        padding: 0 1.5rem; } }
     .overview__rating-average {
       font-size: 2.25rem;
       font-weight: 300;
       margin-bottom: -0.3rem; }
+      @media only screen and (max-width: 27em) {
+        .overview__rating-average {
+          font-size: 1.8rem; } }
     .overview__rating-count {
+      text-align: center;
       font-size: 0.8rem;
       text-transform: uppercase; }
 
@@ -233,6 +271,12 @@ body {
   background-color: var(--color-grey-light-1);
   border-bottom: var(--line);
   font-size: 1.4rem; }
+  @media only screen and (max-width: 55em) {
+    .detail {
+      padding: 1rem; } }
+  @media only screen and (max-width: 35em) {
+    .detail {
+      flex-direction: column; } }
 
 .description {
   background-color: #fff;
@@ -241,6 +285,14 @@ body {
   padding: 3rem;
   margin-right: 4.5rem;
   background-color: #fff; }
+  @media only screen and (max-width: 55em) {
+    .description {
+      padding: 1.5rem;
+      margin-right: 2rem; } }
+  @media only screen and (max-width: 35em) {
+    .description {
+      margin: 0;
+      margin-bottom: 1rem; } }
 
 .paragraph:not(:last-of-type) {
   margin-bottom: 2rem; }
@@ -284,6 +336,8 @@ body {
     border: 0.3rem solid #fff; }
     .recommend__photo:not(:last-child) {
       margin-right: -2rem; }
+  .recommend__friends {
+    display: flex; }
 
 .user-reviews {
   font-size: 1.4rem;
@@ -303,6 +357,13 @@ body {
   flex-direction: column;
   align-items: center;
   overflow: hidden; }
+  @media only screen and (max-width: 55em) {
+    .review {
+      padding: 1.5rem;
+      margin-bottom: 3rem; } }
+  @media only screen and (max-width: 35em) {
+    .review {
+      margin-bottom: 1rem; } }
   .review::before {
     content: '\201C';
     font-size: 20rem;
@@ -342,6 +403,9 @@ body {
 .cta {
   padding: 3.5rem 0;
   text-align: center; }
+  @media only screen and (max-width: 55em) {
+    .cta {
+      padding: 1.5rem; } }
   .cta__book-now {
     text-transform: uppercase;
     font-weight: 300;
@@ -386,6 +450,11 @@ body {
   background-color: var(--color-grey-light-2);
   box-shadow: var(--shadow-dark);
   min-height: 50rem; }
+  @media only screen and (max-width: 75em) {
+    .container {
+      margin: 0;
+      max-width: 100%;
+      max-height: 100%; } }
 
 .header {
   height: 7rem;
@@ -399,6 +468,9 @@ body {
 .content {
   display: flex;
   height: 100%; }
+  @media only screen and (max-width: 55em) {
+    .content {
+      flex-direction: column; } }
 
 .sidebar {
   flex: 0 0 18%;

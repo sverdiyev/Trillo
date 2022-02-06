@@ -114,11 +114,31 @@
 	font-size: 1.4rem;
 	list-style: none;
 	margin-top: 3.5rem;
+	display: flex;
+	flex-direction: column;
+
+	@media only screen and (max-width: $bp-s) {
+		flex-direction: row;
+		margin: 0;
+		&__item {
+			margin: 0;
+		}
+	}
 
 	&__item {
 		position: relative;
+		display: flex;
+		white-space: pre;
+
+		@media only screen and (max-width: $bp-s) {
+			margin: 0;
+			flex: 1;
+		}
 		&:not(:last-child) {
 			margin-bottom: 0.5rem;
+			@media only screen and (max-width: $bp-s) {
+				margin: 0;
+			}
 		}
 	}
 
@@ -154,6 +174,9 @@
 		align-items: center;
 		position: relative;
 		z-index: 3;
+		@media only screen and (max-width: $bp-s) {
+			justify-content: center;
+		}
 	}
 	&__icon {
 		height: 1.75rem;
@@ -168,6 +191,9 @@
 	color: var(--color-grey-light-4);
 	text-align: center;
 	padding: 2.5rem;
+	@media only screen and (max-width: $bp-s) {
+		display: none;
+	}
 }
 
 // Gallery
@@ -192,6 +218,10 @@
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		padding: 1.5rem 3rem;
+		white-space: pre;
+		@media only screen and (max-width: $bp-xxs) {
+			font-size: 1.9rem;
+		}
 	}
 	&__stars {
 		display: flex;
@@ -223,13 +253,21 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		@media only screen and (max-width: $bp-xxs) {
+			margin: 0;
+			padding: 0 1.5rem;
+		}
 
 		&-average {
 			font-size: 2.25rem;
 			font-weight: 300;
 			margin-bottom: -0.3rem;
+			@media only screen and (max-width: $bp-xxs) {
+				font-size: 1.8rem;
+			}
 		}
 		&-count {
+			text-align: center;
 			font-size: 0.8rem;
 			text-transform: uppercase;
 		}
@@ -271,6 +309,12 @@
 	background-color: var(--color-grey-light-1);
 	border-bottom: var(--line);
 	font-size: 1.4rem;
+	@media only screen and (max-width: $bp-s) {
+		padding: 1rem;
+	}
+	@media only screen and (max-width: $bp-xs) {
+		flex-direction: column;
+	}
 }
 .description {
 	background-color: #fff;
@@ -280,6 +324,14 @@
 	margin-right: 4.5rem;
 	// background-color: var(--color-grey-light-1);
 	background-color: #fff;
+	@media only screen and (max-width: $bp-s) {
+		padding: 1.5rem;
+		margin-right: 2rem;
+	}
+	@media only screen and (max-width: $bp-xs) {
+		margin: 0;
+		margin-bottom: 1rem;
+	}
 }
 
 .paragraph:not(:last-of-type) {
@@ -335,6 +387,9 @@
 			margin-right: -2rem;
 		}
 	}
+	&__friends {
+		display: flex;
+	}
 }
 
 .user-reviews {
@@ -360,6 +415,15 @@
 	align-items: center;
 
 	overflow: hidden;
+
+	@media only screen and (max-width: $bp-s) {
+		padding: 1.5rem;
+		margin-bottom: 3rem;
+	}
+	@media only screen and (max-width: $bp-xs) {
+		// margin: 0;
+		margin-bottom: 1rem;
+	}
 
 	&::before {
 		content: '\201C';
@@ -411,6 +475,11 @@
 .cta {
 	padding: 3.5rem 0;
 	text-align: center;
+
+	@media only screen and (max-width: $bp-s) {
+		padding: 1.5rem;
+		// margin-bottom: 3rem;
+	}
 	&__book-now {
 		text-transform: uppercase;
 		font-weight: 300;
