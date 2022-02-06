@@ -1,24 +1,23 @@
 {
-  "name": "css",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "Ncompile:sass": "node-sass Natours_course/sass/style.scss Natours_course/css/style.css -w ",
-    "Tcompile:sass": "node-sass Trillo-flexbox/sass/main.scss Trillo-flexbox/css/style.css -w "
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "eslint": "^8.2.0",
-    "eslint-config-airbnb": "^19.0.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.27.0",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "prettier": "^2.4.1"
-  }
+	"name": "css",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"compile:sass": "node-sass sass/main.scss css/style.css -w "
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"eslint": "^8.2.0",
+		"eslint-config-airbnb": "^19.0.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-import": "^2.25.3",
+		"eslint-plugin-jsx-a11y": "^6.5.1",
+		"eslint-plugin-prettier": "^4.0.0",
+		"eslint-plugin-react": "^7.27.0",
+		"eslint-plugin-react-hooks": "^4.3.0",
+		"prettier": "^2.4.1"
+	}
 }
